@@ -8,6 +8,8 @@ import { CiFilter } from "react-icons/ci";
 import { FiChevronDown } from "react-icons/fi";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { useSearchParams } from "react-router-dom";
+import moment from 'moment';
+
 function LaunchesList() {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -159,7 +161,7 @@ function LaunchesList() {
                         </td>
                         <td className="td">
                           <p className="table-data-text">
-                            24 March 2006 at 22:30
+                            {moment(launch.launch_date_utc).format('MMMM Do YYYY, h:mm:ss a')}
                           </p>
                         </td>
                         <td className="td">
