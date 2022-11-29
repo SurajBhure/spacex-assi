@@ -5,6 +5,7 @@ import { SiNasa } from "react-icons/si";
 import { ImWikipedia } from "react-icons/im";
 import ModalDataList from "./ModalDataList";
 import { Link } from "react-router-dom";
+import moment from 'moment';
 
 const Modal = ({ oneLaunch, visible, onClose }) => {
   if (!visible) return null;
@@ -183,7 +184,9 @@ const Modal = ({ oneLaunch, visible, onClose }) => {
             />
             <ModalDataList
               title="launch date"
-              data={oneLaunch.launch_date_utc}
+              data={moment(oneLaunch.launch_date_utc).format(
+                "D MMMM YYYY, hh:mm"
+              )}
             />
             <ModalDataList
               title="payload type"

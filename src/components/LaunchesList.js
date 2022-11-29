@@ -161,7 +161,7 @@ function LaunchesList() {
                         </td>
                         <td className="td">
                           <p className="table-data-text">
-                            {moment(launch.launch_date_utc).format('MMMM Do YYYY, h:mm:ss a')}
+                            {moment(launch.launch_date_utc).format('D MMMM YYYY, hh:mm')}
                           </p>
                         </td>
                         <td className="td">
